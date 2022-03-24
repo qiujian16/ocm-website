@@ -82,12 +82,29 @@ nav > div.container-fluid {
   height: 100%;
 }
 
+.section-padding {
+  padding: 2rem;
+}
+
 .feature-section {
   padding: 2rem;
   background-color: white;
 }
-.section-padding {
+
+.addons-section {
   padding: 2rem;
+}
+
+.supports-section {
+  padding: 2rem;
+  background-color: white;
+}
+
+.cncf-section {
+  padding-top: 2rem;
+}
+.cncf-section a {
+  color: #f8f9fa;
 }
 
 .border-none {
@@ -130,6 +147,30 @@ nav > div.container-fluid {
 
 .addons-h1 {
   color:#1DCECE;
+}
+
+.supports-grid {
+  display: grid;
+  grid-gap: 2.375rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.supports-logo {
+  display: grid;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  place-items: center;
+  max-width: 320px;
+  width: 100%;
+}
+
+.tencent-logo {
+  padding: 70px;
+}
+
+.cncf-logo {
+  background: url(https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/white/cncf-white.svg) 50% no-repeat;
+  height: 75px;
 }
 
 /* content page */
@@ -272,6 +313,10 @@ nav > div.container-fluid {
   .subject-img {
     background-size: contain;
   }
+
+  .tencent-logo {
+    padding: 25px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -306,5 +351,10 @@ nav > div.container-fluid {
 
   .sidebar-hide-sm {
     display: none;
+  }
+
+  .supports-grid {
+    padding: 0;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
