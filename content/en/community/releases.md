@@ -25,9 +25,11 @@ See details in the release changelogs::
 - cluster-proxy v0.2.0 [repo](https://github.com/open-cluster-management-io/cluster-proxy)
 - managed-serviceaccount v0.2.0 [repo](https://github.com/open-cluster-management-io/managed-serviceaccount)
 - clusteradm v0.2.0 [changelog](https://github.com/open-cluster-management-io/clusteradm/releases/tag/v0.2.0)
+- multicloud-operators-channel v0.7.0 [changelog](https://github.com/open-cluster-management-io/multicloud-operators-channel/releases/tag/v0.7.0)
+- multicloud-operators-subscription v0.7.0 [changelog](https://github.com/open-cluster-management-io/multicloud-operators-subscription/releases/tag/v0.7.0)
 
 
-There are 30+ contributors making contributions in this release, they are, @ChunxiAlexLuo, @dhaiducek, @elgnay, @haoqing0110, @hanqiuzh, @ilan-pinto, @JiahaoWei-RH, @jichenjc, @JustinKuli, @ldpliu, @mikeshng, @mgold1234, @morvencao, @mprahl, @nathanweatherly, @philipwu08, @qiujian16, @rcarrillocruz, @rokej, @skeeey, @TheRealHaoLiu, @vbelouso, @TomerFi, @xauthulei, @xiangjingli, @xuezhaojun, @ycyaoxdu, @yue9944882, @zhujian7, @zhiweiyin318. Thanks for your contributions!
+There are 30+ contributors making contributions in this release, they are, @ChunxiAlexLuo, @dhaiducek, @elgnay, @haoqing0110, @hanqiuzh, @ilan-pinto, @ivan-cai, @JiahaoWei-RH, @jichenjc, @JustinKuli, @ldpliu, @mikeshng, @mgold1234, @morvencao, @mprahl, @nathanweatherly, @philipwu08, @qiujian16, @rcarrillocruz, @rokej, @skeeey, @TheRealHaoLiu, @vbelouso, @vMaroon, @TomerFi, @xauthulei, @xiangjingli, @xuezhaojun, @ycyaoxdu, @yue9944882, @zhujian7, @zhiweiyin318. Thanks for your contributions!
 
 ## `v0.6.0`, on 21st, January 2022
 
