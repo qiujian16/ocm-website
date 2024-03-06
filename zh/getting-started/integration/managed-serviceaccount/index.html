@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="zh"><head>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,12 +31,12 @@
 
 <input id="current-lang" type="hidden" value="zh">
 
-<header class="navbar navbar-expand-md navbar-dark bd-navbar">
+<header class="navbar navbar-expand-lg navbar-dark bd-navbar">
   <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
-    <div class="container-fluid flex-wrap flex-md-nowrap">
+    <div class="container-fluid flex-wrap flex-lg-nowrap">
       <a href="/zh/" class="navbar-brand">
         <img src="/ocm.svg" alt="" width="30" height="24" class="align-text-top">
-        Open Cluster Management
+        <span>Open Cluster Management</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -52,6 +52,9 @@
           <li class="nav-item pe-2">
             <a href="/zh/concepts" class="nav-link text-light">文档</a>
           </li>
+          <li class="nav-item pe-2">
+            <a href="/zh/blog" class="nav-link text-light">博客</a>
+          </li>
           <li class="nav-item dropdown pe-2">
             
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">中文</a>
@@ -64,17 +67,17 @@
             </ul>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank">
+            <a class="nav-link text-light" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank" aria-label="youtube">
                 <i class="bi bi-youtube"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank">
+            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank" aria-label="github">
               <i class="bi bi-github"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://kubernetes.slack.com/?redir=%2Farchives%2FC01GE7YSUUF" target="_blank">
+            <a class="nav-link text-light" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank" aria-label="slack">
               <i class="bi bi-slack"></i>
             </a>
           </li>
@@ -85,7 +88,7 @@
 </header>
 </div>
         <div class="row subject-padding">
-            <div class="col-2 col-md-3 padding-none sidebar-bgc">
+            <div class="col-lg-2 col-md-3 padding-none sidebar-bgc">
 
 
 
@@ -101,15 +104,15 @@
     <ul class="components">
         <li id="concepts">
             <a class="navlink" href="/zh/concepts">概念</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/zh/concepts/architecture">架构</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/zh/concepts/managedcluster">托管集群</a>
+                    <a class="navlink" href="/zh/concepts/clusterclaim">集群声明</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/zh/concepts/manifestwork">资源下发</a>
+                    <a class="navlink" href="/zh/concepts/managedcluster">托管集群</a>
                 </li>
                 <li>
                     <a class="navlink" href="/zh/concepts/managedclusterset">托管集群分组</a>
@@ -118,30 +121,42 @@
                     <a class="navlink" href="/zh/concepts/placement">匹配路由</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/zh/concepts/manifestwork">资源下发</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/concepts/manifestworkreplicaset">资源下发组</a>
+                </li>
+                <li>
                     <a class="navlink" href="/zh/concepts/addon">自定义插件</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/concepts/policy">Policy</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/concepts/multicluster-controlplane">多集群控制面</a>
                 </li>
             </ul>
         </li>
         <li id="getting-started">
             <a class="navlink" href="/zh/getting-started">安装</a>
-            <ul class="collapse">
+            <ul class="collapse show">
                 <li>
                     <a class="navlink" href="/zh/getting-started/quick-start">快速开始</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/zh/getting-started/core">核心组件</a>
+                    <a class="navlink" href="/zh/getting-started/installation">部署</a>
                     <ul class="collapse">
                         <li>
-                            <a class="navlink" href="/zh/getting-started/core/cluster-manager">中枢控制器</a>
+                            <a class="navlink" href="/zh/getting-started/installation/start-the-control-plane">启动控制面</a>
                         </li>
                         <li>
-                            <a class="navlink" href="/zh/getting-started/core/register-cluster">集群代理控制器</a>
+                            <a class="navlink" href="/zh/getting-started/installation/register-a-cluster">注册一个集群</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="navlink" href="/zh/getting-started/integration">插件和集成</a>
-                    <ul class="collapse">
+                    <ul class="collapse show">
                         <li>
                             <a class="navlink" href="/zh/getting-started/integration/app-lifecycle">应用生命周期管理</a>
                         </li>
@@ -161,31 +176,63 @@
                 </li>
                 <li>
                     <a class="navlink" href="/zh/getting-started/administration">运维管理</a>
-                    <ul class="collapse">
+                    <ul class="collapse ">
                         <li>
                             <a class="navlink" href="/zh/getting-started/administration/upgrading">升级版本</a>
+                        </li>
+                        <li>
+                            <a class="navlink" href="/zh/getting-started/administration/monitoring">监控</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
+        <li id="developer-guides">
+            <a class="navlink" href="/zh/developer-guides">开发指南</a>
+            <ul class="collapse ">
+                <li>
+                    <a class="navlink" href="/zh/developer-guides/addon">Add-on 开发指南</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/developer-guides/vscode-extension">VScode插件</a>
+                </li>
+            </ul>
+        </li>
         <li id="scenarios">
             <a class="navlink" href="/zh/scenarios">应用场景</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/zh/scenarios/deploy-kubernetes-resources">部署Kubernetes资源</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/scenarios/distribute-workload-with-placement">通过placement分发工作负载</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/scenarios/migrate-workload-with-placement">通过placement迁移工作负载</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/scenarios/extend-multicluster-scheduling-capabilities">扩展多集群调度能力</a>
                 </li>
                 <li>
                     <a class="navlink" href="/zh/scenarios/extending-managed-clusters">扩展集群模型</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/zh/scenarios/integration-with-argocd">集成Argo CD</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/scenarios/manage-cluster-with-multiple-hubs">使用多个hub管理同一集群</a>
+                </li>
+                <li>
                     <a class="navlink" href="/zh/scenarios/pushing-kube-api-requests">向托管集群推送Kube API请求</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/zh/scenarios/register-cluster-through-proxy">通过代理服务器注册集群</a>
                 </li>
             </ul>
         </li>
         <li id="community">
             <a class="navlink" href="/zh/community">社区</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/zh/community/releases">发行版本</a>
                 </li>
@@ -204,10 +251,10 @@
             <a class="navlink resource" href="https://github.com/open-cluster-management-io" target="_blank"><i class="bi bi-github"></i><span style="padding-left: 10px;">GitHub</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://kubernetes.slack.com/archives/C01GE7YSUUF" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
+            <a class="navlink resource" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
+            <a class="navlink resource" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
         </li>
         <li>
             <a class="navlink resource" href="https://groups.google.com/g/open-cluster-management" target="_blank"><i class="bi bi-envelope-fill"></i><span style="padding-left: 10px;">Mailing group</span></a>
@@ -219,7 +266,7 @@
 </nav>
 <script type="text/javascript" src="/sidebar.js"></script>
 </div>
-            <div class="col-10 col-md-9 padding-none">
+            <div class="col-lg-10 col-md-9 padding-none">
 <div id="content">
     <h1>托管多集群ServiceAccount</h1>
     <!-- spellchecker-disable -->
@@ -249,7 +296,7 @@ and access a Kubernetes cluster:</p>
 <li>Valid X.509 certificate-key pair</li>
 <li>Service account bearer token</li>
 </ul>
-<p>The service account token will be automatically and persisted as a secret
+<p>The service account token will be automatically persisted as a secret
 resource inside the hosting Kubernetes clusters upon creation, which is commonly
 used for the <a href="https://github.com/kubernetes/client-go/tree/master/examples/in-cluster-client-configuration">&ldquo;in-cluster&rdquo;</a>
 client. However, in terms of OCM, the hub cluster is completely an external
@@ -281,22 +328,23 @@ account:</p>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>To install the managed service account addon to the OCM control plane, run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ helm repo add ocm https://open-cluster-management.oss-us-west-1.aliyuncs.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ helm repo add ocm https://openclustermanagement.blob.core.windows.net/releases/
 $ helm repo update
 $ helm search repo ocm
 NAME                              	CHART VERSION	APP VERSION	DESCRIPTION                                   
-ocm/managed-serviceaccount          &lt;...&gt;           1.0.0       A Helm chart <span style="color:#66d9ef">for</span> Managed ServiceAccount Addon
+ocm/managed-serviceaccount          0.2.0           1.0.0       A Helm chart <span style="color:#66d9ef">for</span> Managed ServiceAccount Addon
 ...
 </code></pre></div><p>Then run the following helm command to continue the installation:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ helm install -n open-cluster-management-addon --create-namespace <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    cluster-proxy ocm/cluster-proxy 
+</span><span style="color:#ae81ff"></span>    managed-serviceaccount  ocm/managed-serviceaccount
 $ kubectl -n open-cluster-management-addon get pod
 NAME                                                    READY   STATUS    RESTARTS   AGE
 managed-serviceaccount-addon-manager-559c95b7d8-xsb94   1/1     Running   <span style="color:#ae81ff">1</span>          4d4h 
 ...
 </code></pre></div><p>By default, the addon manager will be automatically discovering the addition or
-removal the managed clusters and installs the proxy agents into them on the
-fly. To check out the healthiness status of the proxy agents, we can run:</p>
+removal the managed clusters and installs the managed serviceaccount agents into
+them on the fly. To check out the healthiness status of the managed serviceaccount
+agents, we can run:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl get managedclusteraddon -A
 NAMESPACE         NAME                     AVAILABLE   DEGRADED   PROGRESSING
 &lt;cluster name&gt;    managed-serviceaccount   True  
@@ -315,7 +363,8 @@ $ kubectl create -f - <span style="color:#e6db74">&lt;&lt;EOF
 </span><span style="color:#e6db74">EOF</span>
 </code></pre></div><p>Then the addon agent in each of the managed cluster is responsible for
 executing and refreshing the status of the <code>ManagedServiceAccount</code>, e.g.:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl describe ManagedServiceAccount -n cluster1
+...
   status:
     conditions:
     - lastTransitionTime: <span style="color:#e6db74">&#34;2021-12-09T09:08:15Z&#34;</span>
@@ -332,7 +381,11 @@ executing and refreshing the status of the <code>ManagedServiceAccount</code>, e
     tokenSecretRef:
       lastRefreshTimestamp: <span style="color:#e6db74">&#34;2021-12-09T09:08:15Z&#34;</span>
       name: my-sample
-</code></pre></div><p>The corresponding secret will also be created in the hub cluster, which is
+</code></pre></div><p>The service account will be created in the managed cluster (assume the name is <code>cluster1</code>):</p>
+<pre><code>$ kubectl get sa my-sample -n open-cluster-management-managed-serviceaccount --context kind-cluster1
+NAME        SECRETS   AGE
+my-sample   1         9m57s
+</code></pre><p>The corresponding secret will also be created in the hub cluster, which is
 visible via:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl -n &lt;your cluster&gt; get secret my-sample  
 NAME        TYPE     DATA   AGE
@@ -347,7 +400,7 @@ my-sample   Opaque   <span style="color:#ae81ff">2</span>      2m23s
         </div>
         <div class="row"><nav class="ocm navbar navbar-expand-lg navbar-dark py-3">
   <div class="container-fluid flex-wrap flex-md-nowrap">
-    <div class="text-light">&copy; 2021 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
+    <div class="text-light">&copy; 2024 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
   </div>
 </nav>
 <script type="text/javascript" src="/lang.js"></script>

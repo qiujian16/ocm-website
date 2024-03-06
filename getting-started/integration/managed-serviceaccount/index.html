@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en"><head>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,12 +29,12 @@
 
 <input id="current-lang" type="hidden" value="en">
 
-<header class="navbar navbar-expand-md navbar-dark bd-navbar">
+<header class="navbar navbar-expand-lg navbar-dark bd-navbar">
   <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
-    <div class="container-fluid flex-wrap flex-md-nowrap">
+    <div class="container-fluid flex-wrap flex-lg-nowrap">
       <a href="/" class="navbar-brand">
         <img src="/ocm.svg" alt="" width="30" height="24" class="align-text-top">
-        Open Cluster Management
+        <span>Open Cluster Management</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -50,6 +50,9 @@
           <li class="nav-item pe-2">
             <a href="/concepts" class="nav-link text-light">Document</a>
           </li>
+          <li class="nav-item pe-2">
+            <a href="/blog" class="nav-link text-light">Blog</a>
+          </li>
           <li class="nav-item dropdown pe-2">
             
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">English</a>
@@ -62,17 +65,17 @@
             </ul>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank">
+            <a class="nav-link text-light" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank" aria-label="youtube">
                 <i class="bi bi-youtube"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank">
+            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank" aria-label="github">
               <i class="bi bi-github"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://kubernetes.slack.com/?redir=%2Farchives%2FC01GE7YSUUF" target="_blank">
+            <a class="nav-link text-light" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank" aria-label="slack">
               <i class="bi bi-slack"></i>
             </a>
           </li>
@@ -83,7 +86,7 @@
 </header>
 </div>
         <div class="row subject-padding">
-            <div class="col-2 col-md-3 padding-none sidebar-bgc">
+            <div class="col-lg-2 col-md-3 padding-none sidebar-bgc">
 
 
 
@@ -97,15 +100,15 @@
     <ul class="components">
         <li id="concepts">
             <a class="navlink" href="/concepts">Concepts</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/concepts/architecture">Architecture</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/concepts/managedcluster">ManagedCluster</a>
+                    <a class="navlink" href="/concepts/clusterclaim">ClusterClaim</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/concepts/manifestwork">ManifestWork</a>
+                    <a class="navlink" href="/concepts/managedcluster">ManagedCluster</a>
                 </li>
                 <li>
                     <a class="navlink" href="/concepts/managedclusterset">ManagedClusterSet</a>
@@ -114,30 +117,42 @@
                     <a class="navlink" href="/concepts/placement">Placement</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/concepts/manifestwork">ManifestWork</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/manifestworkreplicaset">ManifestWorkReplicaSet</a>
+                </li>
+                <li>
                     <a class="navlink" href="/concepts/addon">Add-ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/policy">Policy</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/multicluster-controlplane">Multicluster Control Plane</a>
                 </li>
             </ul>
         </li>
         <li id="getting-started">
             <a class="navlink" href="/getting-started">Getting Started</a>
-            <ul class="collapse">
+            <ul class="collapse show">
                 <li>
                     <a class="navlink" href="/getting-started/quick-start">Quick Start</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/getting-started/core">Core Components</a>
+                    <a class="navlink" href="/getting-started/installation">Installation</a>
                     <ul class="collapse">
                         <li>
-                            <a class="navlink" href="/getting-started/core/cluster-manager">Cluster Manager</a>
+                            <a class="navlink" href="/getting-started/installation/start-the-control-plane">Start the Control Plane</a>
                         </li>
                         <li>
-                            <a class="navlink" href="/getting-started/core/register-cluster">Klusterlet Agent</a>
+                            <a class="navlink" href="/getting-started/installation/register-a-cluster">Register a Cluster</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="navlink" href="/getting-started/integration">Add-ons and Integrations</a>
-                    <ul class="collapse">
+                    <ul class="collapse show">
                         <li>
                             <a class="navlink" href="/getting-started/integration/app-lifecycle">Application lifecycle management</a>
                         </li>
@@ -157,31 +172,63 @@
                 </li>
                 <li>
                     <a class="navlink" href="/getting-started/administration">Administration</a>
-                    <ul class="collapse">
+                    <ul class="collapse ">
                         <li>
                             <a class="navlink" href="/getting-started/administration/upgrading">Upgrading</a>
+                        </li>
+                        <li>
+                            <a class="navlink" href="/getting-started/administration/monitoring">Monitoring</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
+        <li id="developer-guides">
+            <a class="navlink" href="/developer-guides">Developer Guides</a>
+            <ul class="collapse ">
+                <li>
+                    <a class="navlink" href="/developer-guides/addon">Add-on Developer Guide</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/developer-guides/vscode-extension">VScode Extension</a>
+                </li>
+            </ul>
+        </li>
         <li id="scenarios">
             <a class="navlink" href="/scenarios">Scenarios</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/scenarios/deploy-kubernetes-resources">Deploy Kubernetes Resources</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/distribute-workload-with-placement">Distribute Workload With Placement</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/migrate-workload-with-placement">Migrate Workload With Placement</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/extend-multicluster-scheduling-capabilities">Extend Multicluster Scheduling Capabilities</a>
                 </li>
                 <li>
                     <a class="navlink" href="/scenarios/extending-managed-clusters">Extend Managed Clusters</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/scenarios/integration-with-argocd">Integration with Argo CD</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/manage-cluster-with-multiple-hubs">Manage a cluster with multiple hubs</a>
+                </li>
+                <li>
                     <a class="navlink" href="/scenarios/pushing-kube-api-requests">Pushing Kube API Requests to the Managed Clusters</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/register-cluster-through-proxy">Register a cluster to hub through proxy server</a>
                 </li>
             </ul>
         </li>
         <li id="community">
             <a class="navlink" href="/community">Community</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/community/releases">Releases</a>
                 </li>
@@ -200,10 +247,10 @@
             <a class="navlink resource" href="https://github.com/open-cluster-management-io" target="_blank"><i class="bi bi-github"></i><span style="padding-left: 10px;">GitHub</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://kubernetes.slack.com/archives/C01GE7YSUUF" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
+            <a class="navlink resource" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
+            <a class="navlink resource" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
         </li>
         <li>
             <a class="navlink resource" href="https://groups.google.com/g/open-cluster-management" target="_blank"><i class="bi bi-envelope-fill"></i><span style="padding-left: 10px;">Mailing group</span></a>
@@ -215,7 +262,7 @@
 </nav>
 <script type="text/javascript" src="/sidebar.js"></script>
 </div>
-            <div class="col-10 col-md-9 padding-none">
+            <div class="col-lg-10 col-md-9 padding-none">
 <div id="content">
     <h1>Managed service account</h1>
     <!-- spellchecker-disable -->
@@ -277,7 +324,7 @@ account:</p>
 </ul>
 <h2 id="installation">Installation</h2>
 <p>To install the managed service account addon to the OCM control plane, run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ helm repo add ocm https://open-cluster-management.oss-us-west-1.aliyuncs.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ helm repo add ocm https://openclustermanagement.blob.core.windows.net/releases/
 $ helm repo update
 $ helm search repo ocm
 NAME                              	CHART VERSION	APP VERSION	DESCRIPTION                                   
@@ -288,11 +335,12 @@ ocm/managed-serviceaccount          &lt;...&gt;           1.0.0       A Helm cha
 </span><span style="color:#ae81ff"></span>    managed-serviceaccount  ocm/managed-serviceaccount
 $ kubectl -n open-cluster-management-addon get pod
 NAME                                                    READY   STATUS    RESTARTS   AGE
-managed-serviceaccount-addon-manager-559c95b7d8-xsb94   1/1     Running   <span style="color:#ae81ff">1</span>          4d4h 
+managed-serviceaccount-addon-manager-5m9c95b7d8-xsb94   1/1     Running   <span style="color:#ae81ff">1</span>          4d4h 
 ...
 </code></pre></div><p>By default, the addon manager will be automatically discovering the addition or
-removal the managed clusters and installs the proxy agents into them on the
-fly. To check out the healthiness status of the proxy agents, we can run:</p>
+removal the managed clusters and installs the managed serviceaccount agents into
+them on the fly. To check out the healthiness status of the managed serviceaccount
+agents, we can run:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl get managedclusteraddon -A
 NAMESPACE         NAME                     AVAILABLE   DEGRADED   PROGRESSING
 &lt;cluster name&gt;    managed-serviceaccount   True  
@@ -311,7 +359,8 @@ $ kubectl create -f - <span style="color:#e6db74">&lt;&lt;EOF
 </span><span style="color:#e6db74">EOF</span>
 </code></pre></div><p>Then the addon agent in each of the managed cluster is responsible for
 executing and refreshing the status of the <code>ManagedServiceAccount</code>, e.g.:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">...
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl describe ManagedServiceAccount -n cluster1
+...
   status:
     conditions:
     - lastTransitionTime: <span style="color:#e6db74">&#34;2021-12-09T09:08:15Z&#34;</span>
@@ -328,7 +377,11 @@ executing and refreshing the status of the <code>ManagedServiceAccount</code>, e
     tokenSecretRef:
       lastRefreshTimestamp: <span style="color:#e6db74">&#34;2021-12-09T09:08:15Z&#34;</span>
       name: my-sample
-</code></pre></div><p>The corresponding secret will also be created in the hub cluster, which is
+</code></pre></div><p>The service account will be created in the managed cluster (assume the name is <code>cluster1</code>):</p>
+<pre><code>$ kubectl get sa my-sample -n open-cluster-management-managed-serviceaccount --context kind-cluster1
+NAME        SECRETS   AGE
+my-sample   1         9m57s
+</code></pre><p>The corresponding secret will also be created in the hub cluster, which is
 visible via:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ kubectl -n &lt;your cluster&gt; get secret my-sample  
 NAME        TYPE     DATA   AGE
@@ -343,7 +396,7 @@ my-sample   Opaque   <span style="color:#ae81ff">2</span>      2m23s
         </div>
         <div class="row"><nav class="ocm navbar navbar-expand-lg navbar-dark py-3">
   <div class="container-fluid flex-wrap flex-md-nowrap">
-    <div class="text-light">&copy; 2021 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
+    <div class="text-light">&copy; 2024 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
   </div>
 </nav>
 <script type="text/javascript" src="/lang.js"></script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="en"><head>
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,12 +29,12 @@
 
 <input id="current-lang" type="hidden" value="en">
 
-<header class="navbar navbar-expand-md navbar-dark bd-navbar">
+<header class="navbar navbar-expand-lg navbar-dark bd-navbar">
   <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
-    <div class="container-fluid flex-wrap flex-md-nowrap">
+    <div class="container-fluid flex-wrap flex-lg-nowrap">
       <a href="/" class="navbar-brand">
         <img src="/ocm.svg" alt="" width="30" height="24" class="align-text-top">
-        Open Cluster Management
+        <span>Open Cluster Management</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
         <span class="navbar-toggler-icon"></span>
@@ -50,6 +50,9 @@
           <li class="nav-item pe-2">
             <a href="/concepts" class="nav-link text-light">Document</a>
           </li>
+          <li class="nav-item pe-2">
+            <a href="/blog" class="nav-link text-light">Blog</a>
+          </li>
           <li class="nav-item dropdown pe-2">
             
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">English</a>
@@ -62,17 +65,17 @@
             </ul>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank">
+            <a class="nav-link text-light" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank" aria-label="youtube">
                 <i class="bi bi-youtube"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank">
+            <a class="nav-link text-light" href="https://github.com/open-cluster-management-io" target="_blank" aria-label="github">
               <i class="bi bi-github"></i>
             </a>
           </li>
           <li class="nav-item pe-2">
-            <a class="nav-link text-light" href="https://kubernetes.slack.com/?redir=%2Farchives%2FC01GE7YSUUF" target="_blank">
+            <a class="nav-link text-light" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank" aria-label="slack">
               <i class="bi bi-slack"></i>
             </a>
           </li>
@@ -97,15 +100,15 @@
     <ul class="components">
         <li id="concepts">
             <a class="navlink" href="/concepts">Concepts</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/concepts/architecture">Architecture</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/concepts/managedcluster">ManagedCluster</a>
+                    <a class="navlink" href="/concepts/clusterclaim">ClusterClaim</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/concepts/manifestwork">ManifestWork</a>
+                    <a class="navlink" href="/concepts/managedcluster">ManagedCluster</a>
                 </li>
                 <li>
                     <a class="navlink" href="/concepts/managedclusterset">ManagedClusterSet</a>
@@ -114,30 +117,42 @@
                     <a class="navlink" href="/concepts/placement">Placement</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/concepts/manifestwork">ManifestWork</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/manifestworkreplicaset">ManifestWorkReplicaSet</a>
+                </li>
+                <li>
                     <a class="navlink" href="/concepts/addon">Add-ons</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/policy">Policy</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/concepts/multicluster-controlplane">Multicluster Control Plane</a>
                 </li>
             </ul>
         </li>
         <li id="getting-started">
             <a class="navlink" href="/getting-started">Getting Started</a>
-            <ul class="collapse">
+            <ul class="collapse show">
                 <li>
                     <a class="navlink" href="/getting-started/quick-start">Quick Start</a>
                 </li>
                 <li>
-                    <a class="navlink" href="/getting-started/core">Core Components</a>
+                    <a class="navlink" href="/getting-started/installation">Installation</a>
                     <ul class="collapse">
                         <li>
-                            <a class="navlink" href="/getting-started/core/cluster-manager">Cluster Manager</a>
+                            <a class="navlink" href="/getting-started/installation/start-the-control-plane">Start the Control Plane</a>
                         </li>
                         <li>
-                            <a class="navlink" href="/getting-started/core/register-cluster">Klusterlet Agent</a>
+                            <a class="navlink" href="/getting-started/installation/register-a-cluster">Register a Cluster</a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a class="navlink" href="/getting-started/integration">Add-ons and Integrations</a>
-                    <ul class="collapse">
+                    <ul class="collapse ">
                         <li>
                             <a class="navlink" href="/getting-started/integration/app-lifecycle">Application lifecycle management</a>
                         </li>
@@ -157,31 +172,63 @@
                 </li>
                 <li>
                     <a class="navlink" href="/getting-started/administration">Administration</a>
-                    <ul class="collapse">
+                    <ul class="collapse ">
                         <li>
                             <a class="navlink" href="/getting-started/administration/upgrading">Upgrading</a>
+                        </li>
+                        <li>
+                            <a class="navlink" href="/getting-started/administration/monitoring">Monitoring</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </li>
+        <li id="developer-guides">
+            <a class="navlink" href="/developer-guides">Developer Guides</a>
+            <ul class="collapse ">
+                <li>
+                    <a class="navlink" href="/developer-guides/addon">Add-on Developer Guide</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/developer-guides/vscode-extension">VScode Extension</a>
+                </li>
+            </ul>
+        </li>
         <li id="scenarios">
             <a class="navlink" href="/scenarios">Scenarios</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/scenarios/deploy-kubernetes-resources">Deploy Kubernetes Resources</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/distribute-workload-with-placement">Distribute Workload With Placement</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/migrate-workload-with-placement">Migrate Workload With Placement</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/extend-multicluster-scheduling-capabilities">Extend Multicluster Scheduling Capabilities</a>
                 </li>
                 <li>
                     <a class="navlink" href="/scenarios/extending-managed-clusters">Extend Managed Clusters</a>
                 </li>
                 <li>
+                    <a class="navlink" href="/scenarios/integration-with-argocd">Integration with Argo CD</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/manage-cluster-with-multiple-hubs">Manage a cluster with multiple hubs</a>
+                </li>
+                <li>
                     <a class="navlink" href="/scenarios/pushing-kube-api-requests">Pushing Kube API Requests to the Managed Clusters</a>
+                </li>
+                <li>
+                    <a class="navlink" href="/scenarios/register-cluster-through-proxy">Register a cluster to hub through proxy server</a>
                 </li>
             </ul>
         </li>
         <li id="community">
             <a class="navlink" href="/community">Community</a>
-            <ul class="collapse">
+            <ul class="collapse ">
                 <li>
                     <a class="navlink" href="/community/releases">Releases</a>
                 </li>
@@ -200,10 +247,10 @@
             <a class="navlink resource" href="https://github.com/open-cluster-management-io" target="_blank"><i class="bi bi-github"></i><span style="padding-left: 10px;">GitHub</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://kubernetes.slack.com/archives/C01GE7YSUUF" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
+            <a class="navlink resource" href="https://kubernetes.slack.com/channels/open-cluster-mgmt" target="_blank"><i class="bi bi-slack"></i><span style="padding-left: 10px;">Slack</span></a>
         </li>
         <li>
-            <a class="navlink resource" href="https://www.youtube.com/channel/UC7xxOh2jBM5Jfwt3fsBzOZw" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
+            <a class="navlink resource" href="https://www.youtube.com/c/OpenClusterManagement" target="_blank"><i class="bi bi-youtube"></i><span style="padding-left: 10px;">YouTube</span></a>
         </li>
         <li>
             <a class="navlink resource" href="https://groups.google.com/g/open-cluster-management" target="_blank"><i class="bi bi-envelope-fill"></i><span style="padding-left: 10px;">Mailing group</span></a>
@@ -245,7 +292,7 @@
       <li>
       
         <span>
-          <a href="/getting-started/core/" class="gdoc-toc__entry">Core Components</a>
+          <a href="/getting-started/installation/" class="gdoc-toc__entry">Installation</a>
         </span>
       
 
@@ -259,7 +306,7 @@
       <li>
       
         <span>
-          <a href="/getting-started/core/cluster-manager/" class="gdoc-toc__entry">Cluster manager</a>
+          <a href="/getting-started/installation/start-the-control-plane/" class="gdoc-toc__entry">Start the control plane</a>
         </span>
       
 
@@ -274,7 +321,7 @@
       <li>
       
         <span>
-          <a href="/getting-started/core/register-cluster/" class="gdoc-toc__entry">Klusterlet agent</a>
+          <a href="/getting-started/installation/register-a-cluster/" class="gdoc-toc__entry">Register a cluster</a>
         </span>
       
 
@@ -351,7 +398,34 @@
       <li>
       
         <span>
-          <a href="/getting-started/integration/policy-framework/" class="gdoc-toc__entry">Policy framework</a>
+          <a href="/getting-started/integration/policy-controllers/" class="gdoc-toc__entry">Policy controllers</a>
+        </span>
+      
+
+      
+      
+        
+  <ul>
+    
+      
+      
+      <li>
+      
+        <span>
+          <a href="/getting-started/integration/policy-controllers/configuration-policy/" class="gdoc-toc__entry">Configuration Policy</a>
+        </span>
+      
+
+      
+      
+      </li>
+      
+      
+      
+      <li>
+      
+        <span>
+          <a href="/getting-started/integration/policy-controllers/gatekeeper/" class="gdoc-toc__entry">Open Policy Agent Gatekeeper</a>
         </span>
       
 
@@ -361,12 +435,17 @@
       
       
     
+  </ul>
+
+      
+      </li>
+      
       
       
       <li>
       
         <span>
-          <a href="/getting-started/integration/policy-controllers/" class="gdoc-toc__entry">Policy controllers</a>
+          <a href="/getting-started/integration/policy-framework/" class="gdoc-toc__entry">Policy framework</a>
         </span>
       
 
@@ -395,6 +474,19 @@
         
   <ul>
     
+      
+      
+      <li>
+      
+        <span>
+          <a href="/getting-started/administration/monitoring/" class="gdoc-toc__entry">Monitoring OCM using Prometheus-Operator</a>
+        </span>
+      
+
+      
+      
+      </li>
+      
       
       
       <li>
@@ -432,7 +524,7 @@
         </div>
         <div class="row"><nav class="ocm navbar navbar-expand-lg navbar-dark py-3">
   <div class="container-fluid flex-wrap flex-md-nowrap">
-    <div class="text-light">&copy; 2021 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
+    <div class="text-light">&copy; 2024 Open Cluster Management Authors. The Linux Foundation® (TLF) has registered trademarks and uses trademarks. For a list of TLF trademarks, see <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" style="color: #f8f9fa;">Trademark Usage</a></div>
   </div>
 </nav>
 <script type="text/javascript" src="/lang.js"></script>
